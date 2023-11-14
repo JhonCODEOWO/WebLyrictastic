@@ -1,0 +1,31 @@
+SOLUCIONADO NO PODRAN COMENTAR SIN UNA CUENTA 1. Permitir a usuarios sin iniciar sesión comentar como Ánonimos o en dado caso no permitirles comentar.
+EN PROCESO, SE HA SANITIZADO SOLAMENTE LA CREACION DEL USUARIO 2. Sanitizar todas las entradas de variables que interactuen con la base de datos para evitar hackeos.
+3. Portear todo el sitio web a POO.
+4. Crear una clase con todos los query que se van a usar.
+SOLUCIONADO 5. Arreglar actualización, si no se selecciona nignuna no se debe de actualizar el registro.
+6. Validar datos en el apartado de profile.php antes de mandarlos a la consulta
+SOLUCIONADO UNICAMENTE EN UPDATE DE LAS LETRAS, PENDIENTE EN ELIMINAR 7. Eliminar archivos en el servidor al actualizar imagenes.
+8. Crear botones de eliminar y modificar comentarios
+9. Agregar escuchar ahora de spotify
+REALIZADO SOLO PARA COMPUTADORA, AÚN QUEDA PENDIENTE LA REALIZACION EN MOVIL: 10. Generar menú de opciones del header para el usuario
+10. Arreglar enlace para las canciones, en ves de los elementos de información debe encerrar el div contenedor de información
+11. Arreglar el diseño del header para moviles.
+12. Crear metodo que devuelva un arreglo con todos los errores posibles al rellenar los formularios
+13. Mostrar imagen seleccionada al dar click en un file submit
+14. Realizar el método de añadir y eliminar imagen para la actualización de usuario 
+15. Realizar el filtro por generos de las letras
+PENDIENTE:
+SOLUCIONADO Adaptación del header a movil NOTAS: Hay algunos bugs al realizar size en una pantalla de laptop o mayor a 768px pendiente de arreglar
+
+//Ya resuelto solo falta implementar
+
+SOLUCIONADO 7. Adaptar el botón seleccionar imagen copn relative y absolute en el apartado de perfil. En el div padre para la foto y el input de seleccionar colocamos position rwelative; para el div hijo que contiene el input de imagen colocamos position absolute y le damos 100% a hegith y width, para posteriormente darle esos mismo valores al input. No olvidar centrar la imagen con text align en su div padre.
+
+
+25/09/2023
+* Se agregó un método que verifica que las imagenes elegidas sean cuadradas
+* Se cambió el nombre para los elementos file input, debe usarse siempre foto-input
+* Se agregó un if que verifica que el elemento input tenga un elemento seleccionado al iniciar la página
+
+15/10/2023
+* Se añadió la tabla generos y se dió el diseño para la barra de generos en discover.php
