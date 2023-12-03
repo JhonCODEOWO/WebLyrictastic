@@ -37,7 +37,7 @@
         <?php foreach($resultado as $letra) {?>
                 <div class="letra-tarjeta overlay-tarjeta">
                     <div class="letra-tarjeta-content-blur">
-                        <a class="without-transition-a" href="lyric.php?id=<?php echo $letra['id'] ?>&s=index">
+                        <a class="without-transition-a" href="lyric.php?id=<?php echo $letra['id_letra'] ?>&s=index">
                                 <img src="<?php echo  'imagenes/'.$letra['imagen'] ?>" alt="imagen_cancion">
                                 <div class="overlay-letra">
                             <h3> <?php echo $letra['titulo'] ?> </h3>

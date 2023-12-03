@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', function (evento) {
     }
 
     //Verifica que exista una imagen seleccionada, si no...
-    if (imageSelected.getAttribute("src") == "s") {
+    if (imageSelected.getAttribute("src") == "") {
         // console.log("Sin imagen");
         imageSelected.src = '/LyrictasticWithBD/imgs/ui/sinimagen.png';
     }
@@ -131,12 +131,13 @@ fileInputImage.addEventListener('input', function (evento) {
             advertencia.classList.add('advertencia');
             boton.classList.add('btn-principal');
             boton.classList.add('btn-warning');
+
             //Añadido de información a los elementos
             tituloAdvertencia.textContent = "Advertencia";
             textoAdvertencia.textContent = "La imagen que seleccionaste no se puede usar. \n Recomendación: Usa una imagen con altura y ancho iguales";
             boton.textContent = "Aceptar";
 
-            //Si hay botones aqui se realizan las operaciones
+            //Si hay botones aqui se añaden sus listeners
             boton.addEventListener('click', function(evento){
                 fileInputImage.scrollIntoView({ behavior: 'smooth', block: 'center'});
                 advertencia.classList.add('ocultar');

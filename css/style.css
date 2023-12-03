@@ -242,6 +242,19 @@ input[type="text"]:focus::placeholder{
     }
 }
 
+.main-index.main-users{
+    background-image: unset;
+    padding: 0;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px){
+    .main-index.main-users{
+        max-width: 120rem;
+    }
+}
+
 .contenedor{
     max-width: 70rem;
     margin: 0 auto;
@@ -368,6 +381,7 @@ input[type="text"]:focus::placeholder{
 
 /*Utilidades*/
 .advertencia{
+    color: black;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -382,7 +396,7 @@ input[type="text"]:focus::placeholder{
 }
 
 .ocultar{
-    display: none;
+    display: none !important;
 }
 
 .sizeh2{
@@ -1749,4 +1763,77 @@ option{
 
 .upload{
     z-index: 300;
+}
+
+
+/* Diseños de users.php */
+.perfil-user{
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.perfil-user:last-of-type{
+    margin-bottom: 0;
+}
+
+.perfil-user:hover{
+    background-color: var(--color-dark-light);
+}
+
+.perfil-user img{
+    border-radius: 50%;
+    width: 10rem;
+}
+
+.perfil-user h2, h3{
+    margin: 0;
+}
+
+/* Diseños de view other profile */
+.vw_prfile{
+
+}
+
+.vw_profile--info{
+    padding: 2rem;
+    background-color: var(--grayDark);
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.vw_profile--imgUser{
+    width: 20rem;
+    border-radius: 50%;
+}
+
+@media (min-width: 768px){
+    .vw_profile--imgUser{
+        width: 28rem;
+    }
+}
+
+.vw_profile--showLetras{
+    background-color: var(--grayDark);
+    margin: 1rem;
+    border-radius: 1rem;
+}
+
+.vw_profile--letras{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 5rem;
+}
+
+@media (min-width: 768px){
+    .vw_profile--letras{
+        grid-template-columns: repeat(4, 1fr);
+        
+    }
 }

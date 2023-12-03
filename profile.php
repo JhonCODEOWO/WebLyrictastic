@@ -15,6 +15,11 @@ $rutaImagenActual = $_SESSION["ruta_img"] ?? null;
 $correo = "";
 $totalLetras = "";
 $errores = [];
+$es_visita = false;
+
+//Verificamos que de parte de la query string provenga un valor
+$id_query_string = $_GET['id_profile'] ?? null;
+
 
 //Si alguno de los valores que provienen de sesion son nulos redirigimos a inicio
 if ($nombre == null || $apellidos == null || $alias == null) {
