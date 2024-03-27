@@ -1,9 +1,12 @@
 <?php
-    require_once "includes/classes/funciones.php";
-    require_once "includes/classes/querys_for_users.php";
+    // require_once "includes/classes/funciones.php";
+    // require_once "includes/classes/querys_for_users.php";
 
-    require "includes/config/db.php";
-    $db = conectarDB();
+    // require "includes/config/db.php";
+    // $db = conectarDB();
+
+    require 'includes/app.php';
+    use App\Usuario;
     
     // require 'includes/config/db.php';
     // $db = conectarDB();
@@ -14,7 +17,14 @@
     $contraseña = "";
     $email = "";
     $errores = [];
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        //Debug temporal para la implementación de POO
+        $usuario = new Usuario($_POST);
+
+        $usuario -> guardar();
+        // debuguear($usuario);
 
         $imagen = $_FILES['foto-perfil'];
         $tipoImagen = $imagen['type'];
@@ -99,13 +109,13 @@
                     <h1>Crear cuenta</h1>
                     <label for="foto-perfil">Imágen de perfil</label>
                     <div class="update-file">
-                        <input class="file" type="file" name="foto-perfil" id="foto-perfil">
+                        <input class="file" type="file" name="foto" id="foto">
                         <button class="btn-upload-file">Seleccionar archivo...</button>
                     </div>
                     <div class="flex-default gap-normal space-between">
                         <div class="flex-column width-100">
-                            <label for="usuario">Nombre</label>
-                            <input type="text" name="usuario" id="usuario" placeholder="Escribe el nombre de usuario">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Escribe el nombre de usuario">
                         </div>
 
                         <div class="flex-column width-100">

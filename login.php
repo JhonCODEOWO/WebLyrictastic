@@ -5,6 +5,7 @@
     $alias = "";
     $contraseña = "";
     $errores = [];
+    
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $alias = $_POST["alias"];
         $contraseña = $_POST["contraseña"];

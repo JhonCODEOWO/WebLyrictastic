@@ -1,0 +1,16 @@
+{
+    "name": "jhon/lyrictastic-with-bd",
+    "description": "Proyecto para subida de letras de canciones",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jhon"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "./classes"
+        }
+    }
+}
